@@ -22,12 +22,6 @@ h3 {text-align:center}
 ![bg right:40%](imagens/louvor.png)
 
 ---
-<style scoped> 
-h1 {font-size:100px; text-align:center; margin-top:150px;}
-</style>
-# Essa é minha primeira python nordeste!
-
----
 # Quem sou eu?
 
 - (auto descrição)
@@ -56,7 +50,7 @@ h1 {font-size:100px; text-align:center; margin-top:150px;}
 - Bacharel em Física
 - Trabalho com engenharia de software no Serasa
 - Gosto de vôlei, jogos de tabuleiro e tenho uma tatuagem do desenho Avatar
-* Já auxiliei na organização de eventos Python Brasil
+* Ajudo na organização de eventos Python Brasil
 ![bg right:33%](imagens/eu.jpeg)
 
 ---
@@ -190,12 +184,13 @@ p {font-size: 100px; text-align:center;}
 <!-- 
 No desenvolvimento web atual costumamos usar plataformas de computação em nuvem como a do Google (GCP) ou da Amazon (AWS)
 -->
-- GCP(Google), AWS(Amazon), etc
-- Serviços para monitorar, armazenar e acessar logs: 
+- GCP(Google), AWS(Amazon), Azure(Microsoft), etc
+- Serviços para monitorar, armazenar e acessar logs:
   - Cloud Logging (Google) 
   - CloudWatch (AWS)
+  - Monitor Logs (Azure)
 
-![w:200](imagens/icon-cloud-logging.png) ![w:180](imagens/icon-cloudwatch.png)
+![w:200](imagens/icon-cloud-logging.png) ![w:180](imagens/icon-cloudwatch.png) ![w:350](imagens/azure-monitor3.png)
 
 ---
 ![bg contain](imagens/gcp-logging.png)
@@ -337,8 +332,8 @@ Formatação de strings com sintaxe mais recente **{ }** ao invés de **%**
 ---
 # Agradecimentos
 
-* Equipe de organização da Python Nordeste s2
-* Eduardo Mendes (vide Dunossauro) pela [live de python Nº198](https://www.youtube.com/watch?v=PGAOqAWuwC0) sobre logs que inspirou essa palestra 
+* Eduardo Mendes (vide Dunossauro) pela [live de python Nº198](https://www.youtube.com/watch?v=PGAOqAWuwC0) sobre logs que inspirou essa palestra
+
 ![w:500 center](imagens/thumb-dunossauro.jpg)
 
 ---
