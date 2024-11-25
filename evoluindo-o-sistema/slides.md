@@ -260,6 +260,9 @@ De preferencia a ultima, se tudo der errado instalar via pip
 
 # Voltando para o Poetry (testar direitinho com projeto da ana)
 
+package-mode=false
+poetry config virtualenvs.in-project true
+poetry config virtualenvs.prefer-active-python true
 ![w:1000 center](imagens/poetry-commands.png)
 
 ---
@@ -439,13 +442,36 @@ Assim, precisamos de logs
 
 ---
 
-# Automatizando comandos no nosso sistema
+# Testes
 
-- O que são?
-- No que contribuem para o nosso sistema?
-
+- Focar só em unitario ou abranger de integração tbm?
+- Pytest
+- Falar de mock
+- Usar padrão AAA (Arrange, Act, Assert)
 - Como fazer um bom teste?
 
+---
+
+# Em que passo estamos?
+
+<div class="columns">
+<div>
+
+1. ~~configuração do ambiente~~
+2. ~~documentação~~
+3. ~~logs~~
+4. ~~testes~~
+
+</div>
+<div>
+
+5. <span style="color:black">formatadores automáticos</span>
+6. análise estática
+7. automação de comandos
+8. automação com git hooks
+
+</div>
+</div>
 
 ---
 
@@ -471,6 +497,15 @@ Assim, precisamos de logs
 
 - O que são?
 - No que contribuem para o nosso sistema?
+
+---
+
+# Automatizando comandos no nosso sistema
+
+- O que são?
+- No que contribuem para o nosso sistema?
+
+---
 
 
 
