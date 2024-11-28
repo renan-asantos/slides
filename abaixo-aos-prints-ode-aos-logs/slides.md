@@ -82,6 +82,11 @@ img {margin-top: 30px}
 -->
 
 ---
+# O que são prints?
+
+![w:900 center](imagens/print.png)
+
+---
 <style scoped> 
 h1 {font-size:100px; text-align:center; margin-top:200px;} 
 </style>
@@ -99,20 +104,13 @@ h1 {text-align: center;}
 ---
 # O que são logs?
 
->> É uma expressão utilizada para descrever o processo de **registro** de **eventos** relevantes em um sistema computacional.¹
+>> Expressão utilizada para descrever o processo de **registro** de **eventos** relevantes em um sistema computacional.¹
 
-* Registro: "escrever" ou "marcar" algo em algum lugar
+* Registro: "escrever" ou "marcar" **algo** em **algum lugar**
 * Eventos que aconteceram no **passado** e podem ser **observados**
-
+* Exemplos de eventos relevantes: **log**in, **log**off, algum erro no sistema, sucesso em uma requisição externa
+* Local do registro pode ser a saída do terminal, um arquivo, um servidor de email
 <!-- _footer: 1. https://pt.wikipedia.org/wiki/Log_de_dados -->
----
-# Eventos relevantes?
-
-Exemplos de eventos:
-1) **log**in
-2) **log**off
-3) Algum erro no sistema
-4) Um sucesso em uma requisição externa
 
 ---
 # Quando usar prints?
@@ -136,9 +134,9 @@ p {font-size: 100px; text-align:center;}
 <!-- A seguir vou mostrar algumas funcionalidades dos logs que não existem nos prints e como é uma ferramenta poderosa -->
 
 ---
-# Lib padrão de logging do python
+# Logs em python
 
-![w:950 center](imagens/logging-lib.png)
+![w:900 center](imagens/logging-lib.png)
 
 <!-- _footer: https://docs.python.org/pt-br/3.11/library/logging.html -->
 
@@ -155,10 +153,6 @@ p {font-size: 100px; text-align:center;}
 ![w:1100 center](imagens/logging-niveis.png)
 
 <!-- _footer: https://docs.python.org/pt-br/3/howto/logging.html#logging-howto -->
-
----
-# Conceitos de logs - formatação
-![w:1000 center](imagens/logging-format.png)
 
 ---
 # Conceitos de logs - formatação
@@ -245,20 +239,7 @@ h1 {font-size: 55px}
 
 Apenas um comando para configurações
 
-![w:1000 center](imagens/loguru-add.png)
-
----
-<style scoped> 
-h1 {font-size: 55px}
-</style>
-
-# Simplificação de logs em python com loguru
-
-Formatação de strings com sintaxe mais recente **{ }** ao invés de **%**
-
-![w:1100 center](imagens/loguru-syntax-format.png)
-![w:1100 center](imagens/loguru-syntax-format-saida.png)
-
+![w:900 center](imagens/loguru-add.png)
 
 ---
 <style scoped>
@@ -303,9 +284,10 @@ Formatação de strings com sintaxe mais recente **{ }** ao invés de **%**
 ![w:1100 center](imagens/loguru-struct-simplificado.png)
 
 ---
+
 <style scoped> h1 {font-size: 55px} </style>
 
-# Simplificação de logs em python com loguru
+# Adicionando contexto
 
 - Consigo adicionar informações personalizadas do meu fluxo
 
@@ -315,11 +297,12 @@ Formatação de strings com sintaxe mais recente **{ }** ao invés de **%**
 ---
 <style scoped> h1 {font-size: 55px} </style>
 
-# Simplificação de logs em python com loguru
+# Adicionando contexto
 
 - E adicionar essas informações em todo um contexto
 
-![w:1100 center](imagens/loguru-contextualize.png)
+![w:800 center](imagens/loguru-contextualize.png)
+![w:800 center](imagens/log-de-dentro.png)
 
 ---
 # Resumo da ópera
