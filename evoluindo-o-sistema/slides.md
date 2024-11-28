@@ -25,8 +25,8 @@ h3 {text-align:center}
 </style>
 
 # Evoluindo o sistema
-### Ana Dulce
 ### Renan de Assis
+### Ana Dulce
 
 ---
 
@@ -81,7 +81,7 @@ estar minimamente funcional, mas um projeto de software não acaba aí.
 
 # Motivação
 
-- Existem muitos outros recursos "em volta" da API para melhorar nosso sistema
+- Existem muitos outros recursos "ao redor" da API para melhorar nosso sistema
   - Qualidade
   - Confiabilidade
   - Observabilidade
