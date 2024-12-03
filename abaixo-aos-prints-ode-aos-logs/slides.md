@@ -84,6 +84,8 @@ img {margin-top: 30px}
 ---
 # O que são prints?
 
+<br>
+
 ![w:900 center](imagens/print.png)
 
 ---
