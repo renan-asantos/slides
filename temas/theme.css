@@ -1,0 +1,64 @@
+/* @theme your-theme */
+
+/* @import 'default'; */
+@import 'gaia';
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap');
+
+
+:root {
+  
+  /* Configurações gerais dos slides*/
+  --background-color: #F9ECE5;
+  --text-color: #005C2D;
+  --link-color: #0066cc;
+  --link-hover-color: #004499;
+
+  /* Configurações gerais dos slides*/
+  font-family: "Monda", "Arial", sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Links */
+a { color: var(--link-color); }
+a:hover {
+  color: var(--link-hover-color);
+  opacity: 0.8;
+}
+
+blockquote::before,
+blockquote::after {
+  color: var(--text-color) !important;
+}
+
+footer {
+  color: var(--text-color) !important;
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-color);
+    font-weight: 600;
+} */
+
+/* Assinatura (nome) persistida em todos os slides */
+section::before {
+  content: "Renan de Assis" !important;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  font-size: 15px;
+  color: var(--text-color);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* Ajuste nos números de página */
+section::after {
+  font-size: 55% !important;
+}
+

@@ -1,0 +1,32 @@
+{
+    "markdown.marp.themes": [
+        //"https://example.com/foo/bar/custom-theme.css",
+        "temas/theme.css"
+    ],
+    "markdown.marp.exportType": "html",
+    "markdown.marp.exportAutoOpen": true,
+    "markdown.marp.pdf.noteAnnotations": true,
+    "markdown.marp.html": "default",
+    
+    "carbon.paddingVertical": "0px",
+    "carbon.paddingHorizontal": "0px",
+    "carbon.backgroundColor": "rgba(171, 184, 195, 1)",
+    "carbon.dropShadow": false,
+    "carbon.dropShadowBlurRadius": "67px",
+    "carbon.theme": "Material",
+    "carbon.windowTheme": "boxy",
+    "carbon.fontFamily": "Hack",
+    "carbon.fontSize": "17px",
+    "carbon.lineHeight": "134%",
+    "carbon.windowControls": false,
+    "carbon.widthAdjustment": true,
+    "carbon.lineNumbers": true,
+    "carbon.firstLineNumber": 1,
+    "carbon.exportSize": "2x",
+    "carbon.watermark": false,
+    "carbon.squaredImage": false,
+    "carbon.hiddenCharacters": false,
+    "carbon.name": "",
+    "carbon.width": 680,
+    "carbon.highlights": null
+}

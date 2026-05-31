@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="pt-BR"><head><title>Construindo uma cultura de code review :rocket:</title><meta property="og:title" content="Construindo uma cultura de code review :rocket:"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=overview] button.bespoke-marp-overview-close,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{appearance:none;background-color:initial;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=overview] button.bespoke-marp-overview-close,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4O3J4OjVweDtyeTo1cHg7d2lkdGg6MjVweDtoZWlnaHQ6MjVweH08L3N0eWxlPjwvZGVmcz48cmVjdCB4PSIyMCIgeT0iMjAiIGNsYXNzPSJhIi8+PHJlY3QgeD0iNTUiIHk9IjIwIiBjbGFzcz0iYSIvPjxyZWN0IHg9IjIwIiB5PSI1NSIgY2xhc3M9ImEiLz48cmVjdCB4PSI1NSIgeT0iNTUiIGNsYXNzPSJhIi8+PC9zdmc+") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;interactivity:inert;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;interactivity:auto;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{inset:0;position:absolute}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:#000000a6;border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;view-transition-name:__bespoke_marp_transition_osc__;white-space:nowrap;will-change:transform;z-index:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:where(*),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:where(*){margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:where(*):where(:first-child),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:where(*):where(:first-child){margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+:where(.bespoke-marp-parent){top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:#0000}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent){grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent) :where(svg.bespoke-marp-slide){height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent) :where(svg.bespoke-marp-slide).bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:#0000;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;interactivity:inert;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:#000000a6;border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px);word-wrap:break-word;scrollbar-color:#eeeeee80 #0000;scrollbar-width:thin}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:#0000}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:#eeeeee80;border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}body[data-bespoke-view=overview]{background:#161616;overflow:auto}body[data-bespoke-view=overview] [data-bespoke-marp-fragment=inactive]{visibility:visible}body[data-bespoke-view=overview] .bespoke-marp-overview-header{backdrop-filter:blur(4px);background:#222222d9;box-shadow:0 3px 10px #00000080;box-sizing:border-box;display:flex;height:48px;inset:0 0 auto;justify-content:flex-end;padding:10px;position:fixed;z-index:1}body[data-bespoke-view=overview] button.bespoke-marp-overview-close{height:28px;line-height:28px;transform:rotate(45deg);width:28px}body[data-bespoke-view=overview] .bespoke-marp-parent{display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(0,240px));justify-content:space-around;padding:30px}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide{--bov-selected:#0000;--bov-focus:#161616;--bov-focus-outline:#0000;background-image:conic-gradient(#161616 0 0),conic-gradient(var(--bov-focus) 0 0),conic-gradient(var(--bov-focus-outline) 0 0),conic-gradient(var(--bov-selected) 0 0);background-position:5px 5px,3px 3px,2px 2px,0 0;background-repeat:no-repeat;background-size:calc(100% - 10px) calc(100% - 10px),calc(100% - 6px) calc(100% - 6px),calc(100% - 4px) calc(100% - 4px),100% 100%;content-visibility:visible;cursor:pointer;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));margin:-6px;padding:6px;interactivity:auto;opacity:1;outline:0;pointer-events:auto;scroll-margin-block:30px;width:100%;z-index:0}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide *,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active *{pointer-events:none;interactivity:inert}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:active,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:focus-visible,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:hover{--bov-focus-outline:#161616}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:focus-visible,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:hover{--bov-focus:#999}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:active{--bov-focus:#eee}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{--bov-selected:#0288d1}body[data-bespoke-view=overview]:has(.bespoke-marp-overview-header) .bespoke-marp-parent{padding-top:78px}body[data-bespoke-view=overview]:has(.bespoke-marp-overview-header) .bespoke-marp-parent svg.bespoke-marp-slide{scroll-margin-top:78px}.bespoke-marp-overview{background:#000000a6;inset:0;opacity:0;pointer-events:none;position:fixed;transition:opacity .1s ease;z-index:10}.bespoke-marp-overview iframe{background:#222;border:0;display:block;height:100%;left:0;position:absolute;top:0;width:100%}.bespoke-marp-overview[data-open="1"]{opacity:1;pointer-events:auto}}@media print{.bespoke-marp-overview,.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@charset "UTF-8";@import "https://fonts.bunny.net/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap";div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center;-webkit-text-size-adjust:100%;text-size-adjust:100%}div#\:\$p > svg > foreignObject > section::after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p > svg > foreignObject > section:not([data-marpit-pagination])::after{display:none}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:2em;margin-block:0.67em}div#\:\$p > svg > foreignObject > section video::-webkit-media-controls{will-change:transform}@page {size:1280px 720px;margin:0}@media print{html, body{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p > svg > foreignObject > section{page-break-before:always;break-before:page}div#\:\$p > svg > foreignObject > section, div#\:\$p > svg > foreignObject > section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;print-color-adjust:exact!important;transition:none!important}div#\:\$p > svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#\:\$p > svg > foreignObject > :where(section){container-type:size}div#\:\$p > svg > foreignObject > section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}/*!
+<!DOCTYPE html><html lang="pt-BR"><head><title>Construindo uma cultura de code review :rocket:</title><meta property="og:title" content="Construindo uma cultura de code review :rocket:"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=overview] button.bespoke-marp-overview-close,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{appearance:none;background-color:initial;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=overview] button.bespoke-marp-overview-close,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4O3J4OjVweDtyeTo1cHg7d2lkdGg6MjVweDtoZWlnaHQ6MjVweH08L3N0eWxlPjwvZGVmcz48cmVjdCB4PSIyMCIgeT0iMjAiIGNsYXNzPSJhIi8+PHJlY3QgeD0iNTUiIHk9IjIwIiBjbGFzcz0iYSIvPjxyZWN0IHg9IjIwIiB5PSI1NSIgY2xhc3M9ImEiLz48cmVjdCB4PSI1NSIgeT0iNTUiIGNsYXNzPSJhIi8+PC9zdmc+") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;interactivity:inert;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;interactivity:auto;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{inset:0;position:absolute}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:#000000a6;border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;view-transition-name:__bespoke_marp_transition_osc__;white-space:nowrap;will-change:transform;z-index:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:where(*),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:where(*){margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:where(*):where(:first-child),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:where(*):where(:first-child){margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+:where(.bespoke-marp-parent){top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:#0000}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent){grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent) :where(svg.bespoke-marp-slide){height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent) :where(svg.bespoke-marp-slide).bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:#0000;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;interactivity:inert;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:#000000a6;border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px);word-wrap:break-word;scrollbar-color:#eeeeee80 #0000;scrollbar-width:thin}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:#0000}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:#eeeeee80;border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}body[data-bespoke-view=overview]{background:#161616;overflow:auto}body[data-bespoke-view=overview] [data-bespoke-marp-fragment=inactive]{visibility:visible}body[data-bespoke-view=overview] .bespoke-marp-overview-header{backdrop-filter:blur(4px);background:#222222d9;box-shadow:0 3px 10px #00000080;box-sizing:border-box;display:flex;height:48px;inset:0 0 auto;justify-content:flex-end;padding:10px;position:fixed;z-index:1}body[data-bespoke-view=overview] button.bespoke-marp-overview-close{height:28px;line-height:28px;transform:rotate(45deg);width:28px}body[data-bespoke-view=overview] .bespoke-marp-parent{display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(0,240px));justify-content:space-around;padding:30px}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide{--bov-selected:#0000;--bov-focus:#161616;--bov-focus-outline:#0000;background-image:conic-gradient(#161616 0 0),conic-gradient(var(--bov-focus) 0 0),conic-gradient(var(--bov-focus-outline) 0 0),conic-gradient(var(--bov-selected) 0 0);background-position:5px 5px,3px 3px,2px 2px,0 0;background-repeat:no-repeat;background-size:calc(100% - 10px) calc(100% - 10px),calc(100% - 6px) calc(100% - 6px),calc(100% - 4px) calc(100% - 4px),100% 100%;content-visibility:visible;cursor:pointer;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));margin:-6px;padding:6px;interactivity:auto;opacity:1;outline:0;pointer-events:auto;scroll-margin-block:30px;width:100%;z-index:0}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide *,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active *{pointer-events:none;interactivity:inert}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:active,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:focus-visible,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:hover{--bov-focus-outline:#161616}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:focus-visible,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:hover{--bov-focus:#999}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:active{--bov-focus:#eee}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{--bov-selected:#0288d1}body[data-bespoke-view=overview]:has(.bespoke-marp-overview-header) .bespoke-marp-parent{padding-top:78px}body[data-bespoke-view=overview]:has(.bespoke-marp-overview-header) .bespoke-marp-parent svg.bespoke-marp-slide{scroll-margin-top:78px}.bespoke-marp-overview{background:#000000a6;inset:0;opacity:0;pointer-events:none;position:fixed;transition:opacity .1s ease;z-index:10}.bespoke-marp-overview iframe{background:#222;border:0;display:block;height:100%;left:0;position:absolute;top:0;width:100%}.bespoke-marp-overview[data-open="1"]{opacity:1;pointer-events:auto}}@media print{.bespoke-marp-overview,.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@charset "UTF-8";@import "https://fonts.bunny.net/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap";@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap');div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center;-webkit-text-size-adjust:100%;text-size-adjust:100%}div#\:\$p > svg > foreignObject > section::after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p > svg > foreignObject > section:not([data-marpit-pagination])::after{display:none}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:2em;margin-block:0.67em}div#\:\$p > svg > foreignObject > section video::-webkit-media-controls{will-change:transform}@page {size:1280px 720px;margin:0}@media print{html, body{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p > svg > foreignObject > section{page-break-before:always;break-before:page}div#\:\$p > svg > foreignObject > section, div#\:\$p > svg > foreignObject > section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;print-color-adjust:exact!important;transition:none!important}div#\:\$p > svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}/*!
  * Marp / Marpit Gaia theme.
  *
  * @theme gaia
@@ -13,8 +13,8 @@
   );--color-foreground:light-dark(#455a64, #fff8e1);--color-dimmed:light-dark(
     #6a7a7d,
     #dad8c8
-  );--color-highlight:light-dark(#0288d1, #81d4fa);background-color:var(--color-background);background-image:linear-gradient(135deg, hsla(0,0%,53%,0), hsla(0,0%,53%,.02) 50%, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,.05));color:var(--color-foreground);color-scheme:light;font-family:Lato,Avenir Next,Avenir,Trebuchet MS,Segoe UI,sans-serif;font-size:35px;height:720px;letter-spacing:1.25px;line-height:1.35;overflow-wrap:break-word;padding:70px;width:1280px}div#\:\$p > svg > foreignObject > section{--marpit-root-font-size:35px}div#\:\$p > svg > foreignObject > section:after{bottom:0;font-size:80%;right:0}div#\:\$p > svg > foreignObject > section:after{--marpit-root-font-size:80%}div#\:\$p > svg > foreignObject > section a,div#\:\$p > svg > foreignObject > section mark{color:var(--color-highlight)}div#\:\$p > svg > foreignObject > section code{background:var(--color-dimmed);color:var(--color-background)}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong,div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong,div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong,div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong,div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong,div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{color:var(--color-highlight)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){background:var(--color-foreground)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)>code{background:transparent}div#\:\$p > svg > foreignObject > section blockquote:after,div#\:\$p > svg > foreignObject > section blockquote:before,div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header,div#\:\$p > svg > foreignObject > section section:after{color:var(--color-dimmed)}div#\:\$p > svg > foreignObject > section table td,div#\:\$p > svg > foreignObject > section table th{border-color:var(--color-foreground)}div#\:\$p > svg > foreignObject > section table thead th{background:var(--color-foreground);color:var(--color-background)}div#\:\$p > svg > foreignObject > section table tbody>tr:nth-child(odd) td,div#\:\$p > svg > foreignObject > section table tbody>tr:nth-child(odd) th{background:var(--color-background-stripe, transparent)}div#\:\$p > svg > foreignObject > section>:first-child,div#\:\$p > svg > foreignObject > section>header:first-child+*{margin-top:0}div#\:\$p > svg > foreignObject > section:where(.invert){color-scheme:dark}div#\:\$p > svg > foreignObject > section:where(.gaia){--color-background:#0288d1;--color-background-stripe:rgba(255,248,225,.1);--color-foreground:#fff8e1;--color-dimmed:#cce2de;--color-highlight:#81d4fa;}div#\:\$p > svg > foreignObject > section:where(.lead){align-items:stretch;flex-flow:column nowrap;place-content:safe center center}div#\:\$p > svg > foreignObject > section:where(.lead) :is(h1, marp-h1),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h2, marp-h2),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h3, marp-h3),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h4, marp-h4),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h5, marp-h5),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h6, marp-h6){text-align:center}div#\:\$p > svg > foreignObject > section:where(.lead) p{text-align:center}div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h1, marp-h1),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h2, marp-h2),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h3, marp-h3),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h4, marp-h4),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h5, marp-h5),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h6, marp-h6),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>p{text-align:left}div#\:\$p > svg > foreignObject > section:where(.lead) ol>li>p,div#\:\$p > svg > foreignObject > section:where(.lead) ul>li>p{text-align:left}div#\:\$p > svg > foreignObject > section:where(.lead) table{margin-left:auto;margin-right:auto}div#\:\$p > svg > foreignObject > section img[alt~="center"]{display:block;margin:0 auto}div#\:\$p > svg > foreignObject > section .columns{display:flex;gap:calc(var(--marpit-root-font-size, 1rem) * 2)}div#\:\$p > svg > foreignObject > section .column{flex:1}div#\:\$p > svg > foreignObject > section[data-marpit-scope-MJMtUjeK] :is(h1, marp-h1){text-align:center;margin-top:120px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-MJMtUjeK] :is(h3, marp-h3){text-align:center}div#\:\$p > svg > foreignObject > section[data-marpit-scope-UHTb3JD8] :is(h1, marp-h1){font-size:100px;text-align:center;margin-top:200px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-9tPRji8h] :is(h1, marp-h1){text-align:center}div#\:\$p > svg > foreignObject > section[data-marpit-scope-9tPRji8h] img{margin-top:30px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-sT44kjFb] :is(h1, marp-h1){font-size:100px;text-align:center;margin-top:150px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-fOtUYTx0] :is(h1, marp-h1){font-size:100px;text-align:center;margin-top:150px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::after, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::after{display:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction="vertical"]{flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split] > div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split, 50%)}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split="right"] > div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure > figcaption{position:absolute;border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"], div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"]{background:transparent!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"], div#\:\$p > svg[data-marpit-svg] > foreignObject[data-marpit-advanced-background="pseudo"]{pointer-events:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background-split]{width:100%;height:100%}
-</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="overview" tabindex="-1" title="Toggle overview view (o)">Toggle overview view</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-scope-MJMtUjeK="" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+  );--color-highlight:light-dark(#0288d1, #81d4fa);background-color:var(--color-background);background-image:linear-gradient(135deg, hsla(0,0%,53%,0), hsla(0,0%,53%,.02) 50%, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,.05));color:var(--color-foreground);color-scheme:light;font-family:Lato,Avenir Next,Avenir,Trebuchet MS,Segoe UI,sans-serif;font-size:35px;height:720px;letter-spacing:1.25px;line-height:1.35;overflow-wrap:break-word;padding:70px;width:1280px}div#\:\$p > svg > foreignObject > section{--marpit-root-font-size:35px}div#\:\$p > svg > foreignObject > section:after{bottom:0;font-size:80%;right:0}div#\:\$p > svg > foreignObject > section:after{--marpit-root-font-size:80%}div#\:\$p > svg > foreignObject > section a,div#\:\$p > svg > foreignObject > section mark{color:var(--color-highlight)}div#\:\$p > svg > foreignObject > section code{background:var(--color-dimmed);color:var(--color-background)}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong,div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong,div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong,div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong,div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong,div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{color:var(--color-highlight)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){background:var(--color-foreground)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)>code{background:transparent}div#\:\$p > svg > foreignObject > section blockquote:after,div#\:\$p > svg > foreignObject > section blockquote:before,div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header,div#\:\$p > svg > foreignObject > section section:after{color:var(--color-dimmed)}div#\:\$p > svg > foreignObject > section table td,div#\:\$p > svg > foreignObject > section table th{border-color:var(--color-foreground)}div#\:\$p > svg > foreignObject > section table thead th{background:var(--color-foreground);color:var(--color-background)}div#\:\$p > svg > foreignObject > section table tbody>tr:nth-child(odd) td,div#\:\$p > svg > foreignObject > section table tbody>tr:nth-child(odd) th{background:var(--color-background-stripe, transparent)}div#\:\$p > svg > foreignObject > section>:first-child,div#\:\$p > svg > foreignObject > section>header:first-child+*{margin-top:0}div#\:\$p > svg > foreignObject > section:where(.invert){color-scheme:dark}div#\:\$p > svg > foreignObject > section:where(.gaia){--color-background:#0288d1;--color-background-stripe:rgba(255,248,225,.1);--color-foreground:#fff8e1;--color-dimmed:#cce2de;--color-highlight:#81d4fa;}div#\:\$p > svg > foreignObject > section:where(.lead){align-items:stretch;flex-flow:column nowrap;place-content:safe center center}div#\:\$p > svg > foreignObject > section:where(.lead) :is(h1, marp-h1),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h2, marp-h2),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h3, marp-h3),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h4, marp-h4),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h5, marp-h5),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h6, marp-h6){text-align:center}div#\:\$p > svg > foreignObject > section:where(.lead) p{text-align:center}div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h1, marp-h1),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h2, marp-h2),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h3, marp-h3),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h4, marp-h4),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h5, marp-h5),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h6, marp-h6),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>p{text-align:left}div#\:\$p > svg > foreignObject > section:where(.lead) ol>li>p,div#\:\$p > svg > foreignObject > section:where(.lead) ul>li>p{text-align:left}div#\:\$p > svg > foreignObject > section:where(.lead) table{margin-left:auto;margin-right:auto}div#\:\$p > svg > foreignObject > :where(section){container-type:size}div#\:\$p > svg > foreignObject > section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}div#\:\$p > svg > foreignObject > :where(section):not([\20 root]){--background-color: #F9ECE5;--text-color: #005C2D;--link-color: #0066cc;--link-hover-color: #004499;font-family:"Monda", "Arial", sans-serif;color:var(--text-color);background-color:var(--background-color)}div#\:\$p > svg > foreignObject > section a{color:var(--link-color)}div#\:\$p > svg > foreignObject > section a:hover{color:var(--link-hover-color);opacity:0.8}div#\:\$p > svg > foreignObject > section blockquote::before, div#\:\$p > svg > foreignObject > section blockquote::after{color:var(--text-color)!important}div#\:\$p > svg > foreignObject > section footer{color:var(--text-color)!important}div#\:\$p > svg > foreignObject > section::before{content:"Renan de Assis"!important;position:fixed;top:10px;right:20px;font-size:15px;color:var(--text-color);z-index:9999;pointer-events:none}div#\:\$p > svg > foreignObject > section::before{--marpit-root-font-size: 15px}div#\:\$p > svg > foreignObject > section::after{font-size:55%!important}div#\:\$p > svg > foreignObject > section::after{--marpit-root-font-size: 55% !important}div#\:\$p > svg > foreignObject > section img[alt~="center"]{display:block;margin:0 auto}div#\:\$p > svg > foreignObject > section .columns{display:flex;gap:calc(var(--marpit-root-font-size, 1rem) * 2)}div#\:\$p > svg > foreignObject > section .column{flex:1}div#\:\$p > svg > foreignObject > section[data-marpit-scope-slvlQQJW] :is(h1, marp-h1){text-align:center;margin-top:120px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-slvlQQJW] :is(h3, marp-h3){text-align:center}div#\:\$p > svg > foreignObject > section[data-marpit-scope-wZFnfHJ3] :is(h2, marp-h2){font-size:100px;text-align:center;margin-top:200px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FQRxs1UK] :is(h2, marp-h2){font-size:60px;text-align:center}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FQRxs1UK] img{margin-top:30px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-e9k18A5o] :is(h1, marp-h1){font-size:100px;text-align:center;margin-top:150px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-iRsgbEYN] :is(h1, marp-h1){font-size:100px;text-align:center;margin-top:150px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::after, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::after{display:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction="vertical"]{flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split] > div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split, 50%)}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split="right"] > div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure > figcaption{position:absolute;border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"], div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"]{background:transparent!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"], div#\:\$p > svg[data-marpit-svg] > foreignObject[data-marpit-advanced-background="pseudo"]{pointer-events:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background-split]{width:100%;height:100%}
+</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="overview" tabindex="-1" title="Toggle overview view (o)">Toggle overview view</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-scope-slvlQQJW="" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -25,8 +25,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="1" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="1" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -37,8 +37,8 @@
 }
 .column {
   flex: 1;
- }
-;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="45" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;imagens/tv-cultura.png&quot;);background-size:500px auto;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="1" data-marpit-scope-MJMtUjeK="" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+}
+;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="45" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;imagens/tv-cultura-sem-fundo.png&quot;);background-size:400px auto;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="1" data-marpit-scope-slvlQQJW="" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -49,8 +49,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="1" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="1" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -61,12 +61,12 @@
 }
 .column {
   flex: 1;
- }
+}
 ;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="45" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h1 id="construindo-uma-cultura-de-code-review-%F0%9F%9A%80">Construindo uma cultura de code review <img class="emoji" draggable="false" alt="🚀" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f680.svg" data-marp-twemoji=""/></h1>
 <h3 id="renan-de-assis">Renan de Assis</h3>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-marpit-scope-MJMtUjeK="" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-marpit-scope-slvlQQJW="" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -77,8 +77,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="1" style="" data-marpit-pagination-total="45" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="1" style="" data-marpit-pagination-total="45" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -89,8 +89,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="2" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="2" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -101,7 +101,7 @@
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="sum%C3%A1rio">Sumário</h2>
 <ol>
@@ -111,7 +111,7 @@
 <li>Dicas para revisores de PRs</li>
 </ol>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -122,8 +122,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="3" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="3" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -134,8 +134,8 @@
 }
 .column {
   flex: 1;
- }
-;--marpit-advanced-background-split:33%;" data-marpit-pagination-total="45" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;imagens/eu.jpeg&quot;);"></figure></div></section></foreignObject><foreignObject width="67%" height="720"><section id="3" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+}
+;--marpit-advanced-background-split:33%;" data-marpit-pagination-total="45" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;imagens/eu.jpeg&quot;);"></figure></div></section></foreignObject><foreignObject width="67%" height="720"><section id="3" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -146,8 +146,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="3" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="3" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -158,14 +158,14 @@
 }
 .column {
   flex: 1;
- }
+}
 ;--marpit-advanced-background-split:33%;" data-marpit-pagination-total="45" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
-<h1 id="quem-sou-eu">Quem sou eu?</h1>
+<h2 id="quem-sou-eu">Quem sou eu?</h2>
 <ul>
 <li>(auto descrição)</li>
 </ul>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -176,8 +176,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="3" style="" data-marpit-pagination-total="45" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="3" style="" data-marpit-pagination-total="45" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -188,8 +188,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="4" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="4" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -200,8 +200,8 @@
 }
 .column {
   flex: 1;
- }
-;--marpit-advanced-background-split:33%;" data-marpit-pagination-total="45" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;imagens/eu.jpeg&quot;);"></figure></div></section></foreignObject><foreignObject width="67%" height="720"><section id="4" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+}
+;--marpit-advanced-background-split:33%;" data-marpit-pagination-total="45" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;imagens/eu.jpeg&quot;);"></figure></div></section></foreignObject><foreignObject width="67%" height="720"><section id="4" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -212,8 +212,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="4" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="4" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -224,16 +224,16 @@
 }
 .column {
   flex: 1;
- }
+}
 ;--marpit-advanced-background-split:33%;" data-marpit-pagination-total="45" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
-<h1 id="quem-sou-eu-1">Quem sou eu?</h1>
+<h2 id="quem-sou-eu-1">Quem sou eu?</h2>
 <ul>
 <li>Bacharel em Física</li>
 </ul>
 <p><img src="imagens/neil-degrasse-physics.gif" alt="center" style="width:600px;" /><br />
 </p>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -244,8 +244,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="4" style="" data-marpit-pagination-total="45" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="4" style="" data-marpit-pagination-total="45" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -256,8 +256,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="5" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="5" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -268,8 +268,8 @@
 }
 .column {
   flex: 1;
- }
-;--marpit-advanced-background-split:33%;" data-marpit-pagination-total="45" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;imagens/eu.jpeg&quot;);"></figure></div></section></foreignObject><foreignObject width="67%" height="720"><section id="5" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+}
+;--marpit-advanced-background-split:33%;" data-marpit-pagination-total="45" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;imagens/eu.jpeg&quot;);"></figure></div></section></foreignObject><foreignObject width="67%" height="720"><section id="5" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -280,8 +280,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="5" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="5" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -292,9 +292,9 @@
 }
 .column {
   flex: 1;
- }
+}
 ;--marpit-advanced-background-split:33%;" data-marpit-pagination-total="45" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
-<h1 id="quem-sou-eu-2">Quem sou eu?</h1>
+<h2 id="quem-sou-eu-2">Quem sou eu?</h2>
 <div class="columns">
   <div class="column">
 <ul>
@@ -302,7 +302,7 @@
 <p>Bacharel em Física</p>
 </li>
 <li>
-<p>Trabalho com engenharia de software no Serasa</p>
+<p>Engenheiro de software na Serasa</p>
 </div>
 <div class="column">
 </li>
@@ -311,7 +311,7 @@
   </div>
 </div>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -322,8 +322,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="5" style="" data-marpit-pagination-total="45" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="5" style="" data-marpit-pagination-total="45" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -334,8 +334,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="6" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="6" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -346,8 +346,8 @@
 }
 .column {
   flex: 1;
- }
-;--marpit-advanced-background-split:33%;" data-marpit-pagination-total="45" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;imagens/eu.jpeg&quot;);"></figure></div></section></foreignObject><foreignObject width="67%" height="720"><section id="6" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+}
+;--marpit-advanced-background-split:33%;" data-marpit-pagination-total="45" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;imagens/eu.jpeg&quot;);"></figure></div></section></foreignObject><foreignObject width="67%" height="720"><section id="6" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -358,8 +358,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="6" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="6" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -370,18 +370,18 @@
 }
 .column {
   flex: 1;
- }
+}
 ;--marpit-advanced-background-split:33%;" data-marpit-pagination-total="45" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
-<h1 id="quem-sou-eu-3">Quem sou eu?</h1>
+<h2 id="quem-sou-eu-3">Quem sou eu?</h2>
 <ul>
 <li>Bacharel em Física</li>
-<li>Trabalho com engenharia de software no Serasa</li>
+<li>Engenheiro de software na Serasa</li>
 <li>Jogo vôlei, adoro jogos de tabuleiro e tenho uma tatuagem do desenho Avatar</li>
 <li>Ajudei uns anos na organização dos eventos Python Brasil<br />
 </li>
 </ul>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -392,8 +392,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="6" style="" data-marpit-pagination-total="45" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-marpit-scope-UHTb3JD8="" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="6" style="" data-marpit-pagination-total="45" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-marpit-scope-wZFnfHJ3="" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -404,8 +404,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="7" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="7" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -416,11 +416,11 @@
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
-<h1 id="avisos">AVISOS</h1>
+<h2 id="avisos">AVISOS</h2>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-marpit-scope-9tPRji8h="" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-marpit-scope-FQRxs1UK="" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -431,8 +431,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="8" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="8" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -443,16 +443,16 @@
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
-<h1 id="avisos-1">AVISOS</h1>
+<h2 id="avisos-1">AVISOS</h2>
 <ul>
 <li>Minhas considerações do que <strong>eu</strong> aprendi na vida</li>
 <li>Tudo aqui é debatível<br />
 <img src="imagens/sei-nada-sei.png" alt="center" style="width:600px;" /></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-marpit-fragments="1" data-class="invert" data-paginate="true" data-footer="1. Definição própria" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-marpit-fragments="1" data-class="invert" data-paginate="true" data-footer="1. Definição própria" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -463,8 +463,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="9" style="--class:invert;--paginate:true;--footer:1. Definição própria;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="9" style="--class:invert;--paginate:true;--footer:1. Definição própria;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -475,7 +475,7 @@
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="o-que-s%C3%A3o-prs">O que são PRs?</h2>
 <blockquote>
@@ -488,7 +488,7 @@
 </ul>
 <footer>1. Definição própria</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -499,8 +499,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="10" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="10" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -511,12 +511,12 @@
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="o-que-s%C3%A3o-prs-1">O que são PRs?</h2>
 <p><img src="imagens/pr1.png" alt="center" style="height:5in;" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -527,8 +527,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="11" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="11" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -539,12 +539,12 @@
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="o-que-s%C3%A3o-prs-2">O que são PRs?</h2>
 <p><img src="imagens/pr2.png" alt="center" style="height:4in;" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-class="invert" data-paginate="true" data-footer="1. Definição própria" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-class="invert" data-paginate="true" data-footer="1. Definição própria" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -555,8 +555,8 @@
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="12" style="--class:invert;--paginate:true;--footer:1. Definição própria;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="12" style="--class:invert;--paginate:true;--footer:1. Definição própria;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -567,7 +567,7 @@
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="o-que-s%C3%A3o-code-reviews">O que são Code Reviews?</h2>
 <blockquote>
@@ -578,7 +578,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 </blockquote>
 <footer>1. Definição própria</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-marpit-fragments="4" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-marpit-fragments="4" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -589,8 +589,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="13" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="13" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -601,7 +601,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="o-que-tamb%C3%A9m-%C3%A9-code-review">O que TAMBÉM É Code Review?</h2>
 <div class="columns">
@@ -626,7 +626,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
   </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-marpit-fragments="2" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-marpit-fragments="2" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -637,8 +637,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="14" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="14" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -649,7 +649,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="o-que-n%C3%A3o-%C3%A9-code-review">O que NÃO É Code Review?</h2>
 <ul>
@@ -658,7 +658,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 <img src="imagens/bala-de-prata.png" alt="center" style="width:550px;" /></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-marpit-fragments="4" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-marpit-fragments="4" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -669,8 +669,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="15" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="15" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -681,7 +681,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="a-import%C3%A2ncia-do-code-review">A importância do Code Review</h2>
 <ul>
@@ -691,7 +691,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 <li data-marpit-fragment="4"><strong>Oportunidade de aprendizado (para ambos)</strong></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-fragments="3" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-fragments="3" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -702,8 +702,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="16" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="16" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -714,7 +714,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="a-import%C3%A2ncia-do-code-review-1">A importância do Code Review</h2>
 <p>Uma boa cultura de code review pode indicar falhas no seu processo...</p>
@@ -724,7 +724,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 <li data-marpit-fragment="3">Necessidade</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-marpit-scope-sT44kjFb="" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-marpit-scope-e9k18A5o="" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -735,8 +735,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="17" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="17" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -747,11 +747,11 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h1 id="dicas-para-autores-de-uma-mr">Dicas para autores de uma MR</h1>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -762,8 +762,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="18" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="18" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -774,8 +774,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="45" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;imagens/meme-big-mr.png&quot;);background-size:400px auto;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="18" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+}
+;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="45" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;imagens/meme-big-mr.png&quot;);background-size:400px auto;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="18" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -786,8 +786,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="18" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="18" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -798,7 +798,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="45" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h2 id="dicas-para-autores-de-uma-mr-1">Dicas para autores de uma MR</h2>
 <ul>
@@ -806,7 +806,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 <li>Sem juntar várias mini melhorias</li>
 </ul>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -817,8 +817,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="18" style="" data-marpit-pagination-total="45" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="18" style="" data-marpit-pagination-total="45" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -829,8 +829,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="19" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="19" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -841,7 +841,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-autores-de-uma-mr-2">Dicas para autores de uma MR</h2>
 <div class="columns">
@@ -867,7 +867,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
   </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -878,8 +878,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="20" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="20" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -890,7 +890,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-autores-de-uma-mr-3">Dicas para autores de uma MR</h2>
 <div class="columns">
@@ -912,7 +912,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
   </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -923,8 +923,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="21" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="21" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -935,7 +935,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-autores-de-uma-mr-4">Dicas para autores de uma MR</h2>
 <div class="columns">
@@ -955,7 +955,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
   </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -966,8 +966,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="22" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="22" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -978,7 +978,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-autores-de-uma-mr-5">Dicas para autores de uma MR</h2>
 <div class="columns">
@@ -998,7 +998,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
   </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1009,8 +1009,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="23" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="23" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1021,7 +1021,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-autores-de-uma-mr-6">Dicas para autores de uma MR</h2>
 <div class="columns">
@@ -1041,7 +1041,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
   </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1052,8 +1052,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="24" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="24" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1064,7 +1064,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-autores-de-uma-mr-7">Dicas para autores de uma MR</h2>
 <div class="columns">
@@ -1083,7 +1083,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
   </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1094,8 +1094,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="25" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="25" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1106,7 +1106,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-autores-de-uma-mr-8">Dicas para autores de uma MR</h2>
 <div class="columns">
@@ -1128,7 +1128,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
   </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-marpit-scope-fOtUYTx0="" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-marpit-scope-iRsgbEYN="" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1139,8 +1139,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="26" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="26" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1151,11 +1151,11 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h1 id="dicas-para-quem-vai-revisar-a-mr">Dicas para quem vai revisar a MR</h1>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1166,8 +1166,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="27" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="27" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1178,7 +1178,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-quem-vai-revisar-a-mr-1">Dicas para quem vai revisar a MR</h2>
 <div class="columns">
@@ -1200,7 +1200,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
   </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1211,8 +1211,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="28" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="28" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1223,7 +1223,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-quem-vai-revisar-a-mr-2">Dicas para quem vai revisar a MR</h2>
 <p><em>Roteiro pessoal</em></p>
@@ -1233,7 +1233,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 <li>Siga o fluxo desde o começo, por exemplo endpoint -&gt; service -&gt; utils</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1244,8 +1244,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="29" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="29" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1256,7 +1256,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-quem-vai-revisar-a-mr-3">Dicas para quem vai revisar a MR</h2>
 <p>Nos arquivos de código...</p>
@@ -1273,7 +1273,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
   </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1284,8 +1284,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="30" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="30" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1296,7 +1296,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-quem-vai-revisar-a-mr-4">Dicas para quem vai revisar a MR</h2>
 <p>Nos arquivos de código...</p>
@@ -1309,7 +1309,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
   </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1320,8 +1320,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="31" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="31" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1332,7 +1332,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-quem-vai-revisar-a-mr-5">Dicas para quem vai revisar a MR</h2>
 <div class="columns">
@@ -1352,7 +1352,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
   </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1363,8 +1363,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="32" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="32" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1375,7 +1375,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-quem-vai-revisar-a-mr-6">Dicas para quem vai revisar a MR</h2>
 <div class="columns">
@@ -1392,7 +1392,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
   </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1403,8 +1403,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="33" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="33" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1415,7 +1415,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-quem-vai-revisar-a-mr-7">Dicas para quem vai revisar a MR</h2>
 <p>Nos arquivos de testes...</p>
@@ -1435,7 +1435,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
   </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1446,8 +1446,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="34" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="34" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1458,7 +1458,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-quem-vai-revisar-a-mr-8">Dicas para quem vai revisar a MR</h2>
 <p>Nos arquivos de testes...</p>
@@ -1478,7 +1478,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
   </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1489,8 +1489,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="35" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="35" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1501,8 +1501,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="45" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;imagens/meme-deploy-docs.png&quot;);background-size:500px auto;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="35" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+}
+;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="45" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;imagens/meme-deploy-docs.png&quot;);background-size:500px auto;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="35" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1513,8 +1513,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="35" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="35" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1525,7 +1525,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="45" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h2 id="dicas-para-quem-vai-revisar-a-mr-9">Dicas para quem vai revisar a MR</h2>
 <p>Nos arquivos de documentação...</p>
@@ -1534,7 +1534,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 <li>A forma de subir local mudou em algo?</li>
 </ul>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1545,8 +1545,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="35" style="" data-marpit-pagination-total="45" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="35" style="" data-marpit-pagination-total="45" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1557,8 +1557,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="36" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="36" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1569,7 +1569,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-quem-vai-revisar-a-mr-10">Dicas para quem vai revisar a MR</h2>
 <div class="columns">
@@ -1581,7 +1581,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
   </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1592,8 +1592,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="37" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="37" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1604,7 +1604,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-quem-vai-revisar-a-mr-11">Dicas para quem vai revisar a MR</h2>
 <p>Ao comentar na MR...</p>
@@ -1613,7 +1613,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 </ul>
 <p><img src="imagens/sugestao-codigo.png" alt="" style="width:750px;" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1624,8 +1624,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="38" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="38" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1636,7 +1636,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-quem-vai-revisar-a-mr-12">Dicas para quem vai revisar a MR</h2>
 <p>Ao comentar na MR...</p>
@@ -1656,7 +1656,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
   </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1667,8 +1667,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="39" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="39" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1679,7 +1679,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-quem-vai-revisar-a-mr-13">Dicas para quem vai revisar a MR</h2>
 <p>Ao comentar na MR...</p>
@@ -1688,7 +1688,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 </ul>
 <p><img src="imagens/elogio.png" alt="center" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1699,20 +1699,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="40" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
 }
-
-.columns {
-  display: flex;
-  gap: 2rem;
-}
-.column {
-  flex: 1;
- }
-;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="45" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;imagens/meme-mr-travada.png&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="40" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+" lang="pt-BR" class="invert" data-marpit-pagination="40" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1723,26 +1711,23 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="40" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
 }
-
-.columns {
-  display: flex;
-  gap: 2rem;
-}
-.column {
-  flex: 1;
- }
-;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="45" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-quem-vai-revisar-a-mr-14">Dicas para quem vai revisar a MR</h2>
+<div class="columns">
+  <div class="column">
 <ul>
-<li>Se você não está revisando a MR de alguém, ela está travada.</li>
+<li>
+<p>Se você não está revisando a MR de alguém, ela está travada.</p>
+</div>
+<div class="column">
+</li>
 </ul>
+<p><img src="imagens/meme-mr-travada.png" alt="center" style="width:550px;" /></p>
+  </div>
+</div>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1753,8 +1738,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="40" style="" data-marpit-pagination-total="45" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="41" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1765,27 +1750,26 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="41" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
 }
-/* layout de duas colunas */
-.columns {
-  display: flex;
-  gap: 2rem;
-}
-.column {
-  flex: 1;
- }
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-quem-vai-revisar-a-mr-15">Dicas para quem vai revisar a MR</h2>
+<div class="columns">
+  <div class="column">
 <ul>
-<li>Não façam LGTM, sem approve da confiança</li>
+<li>
+<p>Não façam LGTM</p>
+</li>
+<li>
+<p>Sem approve da confiança</p>
+</div>
+<div class="column">
+</li>
 </ul>
-<p><img src="imagens/meme-lgtm.png" alt="center" style="width:650px;" /></p>
+<p><img src="imagens/meme-lgtm.png" alt="center" style="width:430px;" /></p>
+  </div>
+</div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1796,8 +1780,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="42" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="42" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1808,7 +1792,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="dicas-para-quem-vai-revisar-a-mr-16">Dicas para quem vai revisar a MR</h2>
 <div class="columns">
@@ -1827,7 +1811,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
   </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" data-marpit-fragments="4" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" data-marpit-fragments="4" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1838,8 +1822,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="43" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="43" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1850,7 +1834,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="o-que-quero-que-levem-com-voc%C3%AAs">O que quero que levem com vocês</h2>
 <ul>
@@ -1860,7 +1844,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 <li data-marpit-fragment="4"><strong>Oportunidade de aprendizado</strong></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1871,8 +1855,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="44" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="44" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1883,7 +1867,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h1 id="agradecimentos">Agradecimentos</h1>
 <div class="columns">
@@ -1895,7 +1879,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
   </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-class="invert" data-paginate="true" data-theme="gaia" data-style="img[alt~=&quot;center&quot;] {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-class="invert" data-paginate="true" data-theme="your-theme" data-style="img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1906,8 +1890,8 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
-" lang="pt-BR" class="invert" data-marpit-pagination="45" style="--class:invert;--paginate:true;--theme:gaia;--style:img[alt~=&quot;center&quot;] {
+}
+" lang="pt-BR" class="invert" data-marpit-pagination="45" style="--class:invert;--paginate:true;--theme:your-theme;--style:img[alt~=&quot;center&quot;] {
   display: block;
   margin: 0 auto;
 }
@@ -1918,7 +1902,7 @@ Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do cód
 }
 .column {
   flex: 1;
- }
+}
 ;" data-marpit-pagination-total="45">
 <h2 id="d%C3%BAvidas">Dúvidas?</h2>
 <div class="columns">
@@ -1928,7 +1912,7 @@ Telegram: @renan_asantos</p>
 <p><img src="imagens/slide-encerramento.png" alt="center" style="width:500px;" /></p>
   </div>
   <div class="column">
-<p>Slides no QRCode (branch code-review)</p>
+<p>Slides no QRCode</p>
 <p><img src="imagens/qrcode-slides.png" alt="center" style="width:350px;" /></p>
   </div>
 </div>

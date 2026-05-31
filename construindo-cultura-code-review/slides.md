@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: gaia
+theme: your-theme
 class: invert
 paginate: true
 style: |
@@ -15,7 +15,7 @@ style: |
     }
     .column {
       flex: 1;
-     }
+    }
 ---
 
 <style scoped>
@@ -26,7 +26,7 @@ h3 {text-align:center}
 # Construindo uma cultura de code review :rocket:
 ### Renan de Assis
 
-![bg right w:500](imagens/tv-cultura.png)
+![bg right w:400](imagens/tv-cultura-sem-fundo.png)
 
 ---
 ## Sumário
@@ -37,14 +37,14 @@ h3 {text-align:center}
 4. Dicas para revisores de PRs
 
 ---
-# Quem sou eu?
+## Quem sou eu?
 
 - (auto descrição)
 
 ![bg right:33%](imagens/eu.jpeg)
 
 ---
-# Quem sou eu?
+## Quem sou eu?
 
 - Bacharel em Física
 
@@ -52,7 +52,7 @@ h3 {text-align:center}
 ![bg right:33%](imagens/eu.jpeg)
 
 ---
-# Quem sou eu?
+## Quem sou eu?
 
 ![bg right:33%](imagens/eu.jpeg)
 
@@ -60,7 +60,7 @@ h3 {text-align:center}
   <div class="column">
 
 - Bacharel em Física
-- Trabalho com engenharia de software no Serasa
+- Engenheiro de software na Serasa
   
   </div>
   <div class="column">
@@ -71,28 +71,28 @@ h3 {text-align:center}
 </div>
 
 ---
-# Quem sou eu?
+## Quem sou eu?
 
 - Bacharel em Física
-- Trabalho com engenharia de software no Serasa
+- Engenheiro de software na Serasa
 - Jogo vôlei, adoro jogos de tabuleiro e tenho uma tatuagem do desenho Avatar
 - Ajudei uns anos na organização dos eventos Python Brasil
 ![bg right:33%](imagens/eu.jpeg)
 
 ---
 <style scoped> 
-h1 {font-size:100px; text-align:center; margin-top:200px;}
+h2 {font-size:100px; text-align:center; margin-top:200px;}
 </style>
 
-# AVISOS
+## AVISOS
 
 ---
 <style scoped>
-h1 {text-align: center}
+h2 {font-size:60px; text-align: center}
 img {margin-top: 30px}
 </style>
 
-# AVISOS
+## AVISOS
 
 - Minhas considerações do que **eu** aprendi na vida
 - Tudo aqui é debatível
@@ -558,16 +558,35 @@ Ao comentar na MR...
 ---
 ## Dicas para quem vai revisar a MR
 
+<div class="columns">
+  <div class="column">
+
 - Se você não está revisando a MR de alguém, ela está travada.
 
-![bg right](imagens/meme-mr-travada.png)
+  </div>
+  <div class="column">
+
+![w:550 center](imagens/meme-mr-travada.png)
+
+  </div>
+</div>
 
 ---
 ## Dicas para quem vai revisar a MR
 
-- Não façam LGTM, sem approve da confiança
+<div class="columns">
+  <div class="column">
 
-![w:650 center](imagens/meme-lgtm.png)
+- Não façam LGTM
+- Sem approve da confiança
+
+  </div>
+  <div class="column">
+
+![w:430 center](imagens/meme-lgtm.png)
+
+  </div>
+</div>
 
 ---
 ## Dicas para quem vai revisar a MR
@@ -631,7 +650,8 @@ Telegram: @renan_asantos
   </div>
   <div class="column">
 
-Slides no QRCode (branch code-review)
+Slides no QRCode
+
 
 ![w:350 center](imagens/qrcode-slides.png)
 
