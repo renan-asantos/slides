@@ -1,7 +1,6 @@
 ---
 marp: true
 theme: your-theme
-class: invert
 paginate: true
 style: |
     img[alt~="center"] {
@@ -32,7 +31,7 @@ h3 {text-align:center}
 ## Sumário
 
 1. O que são PRs e Code Reviews?
-2. Importância de code reviews
+2. Benefícios do code review
 3. Dicas para autores de uma PR
 4. Dicas para revisores de PRs
 
@@ -101,9 +100,18 @@ img {margin-top: 30px}
 ---
 ## O que são PRs?
 
->> Pull Request é um recurso de plataformas de hospedagem de código Git para propor mudanças de código em outra branch de um projeto.¹
+>> Pull Request é um recurso de plataformas de hospedagem de código Git para propor mudanças em um projeto de uma branch para outra.¹
 
-* Gitlab possui um nome que eu prefiro: MRs ou Merge-Requests
+![center](imagens/gitflow-pr.png)
+
+<!-- _footer: 1. Definição própria -->
+---
+
+## O que são PRs?
+
+>> Pull Request é um recurso de plataformas de hospedagem de código Git para propor mudanças em um projeto de uma branch para outra.¹
+
+Gitlab possui um nome que eu prefiro: MRs ou Merge-Requests
 
 <!--
 PR é porque o mantenedor do projeto vai ter que dar um pull depois das alterações realizadas
@@ -125,12 +133,14 @@ MR é porque o autor da MR vai mergear as alterações na branch de destino
 
 ## O que são Code Reviews?
 
->> Revisão de código é um processo em que o autor de uma MR disponibiliza seu código para pelo menos uma outra pessoa avaliar.
->> Essa revisão tem a intenção de identificar bugs, aumentar a qualidade do código e ajudar outros desenvolvedores a aprender sobre o projeto.¹
+>> Revisão de código é o processo no qual o autor de uma MR disponibiliza seu código para pelo menos uma outra pessoa avaliar, essa podendo adicionar comentários para o entendimento, estabelencendo-se um diálogo¹
+
+![w:700 center](imagens/gitflow-code-review.png)
 
 <!-- _footer: 1. Definição própria -->
 
 <!--
+O revisor pode adicionar comentários no código sob revisão, procurando esclarecer dúvidas, sugerindo melhorias, indicando bugs, etc.
 Estabelece-se um "diálogo" na forma de troca de comentários entre o autor do código e o seu revisor.
 -->
 
@@ -141,7 +151,7 @@ Estabelece-se um "diálogo" na forma de troca de comentários entre o autor do c
 <div class="columns">
   <div class="column">
 
-* Pair Programming, só que assíncrono
+- Pair Programming, só que assíncrono
 * Parte da tarefa
 * Última barreira pré produção
 * Acordo entre o time/área/empresa
@@ -149,7 +159,7 @@ Estabelece-se um "diálogo" na forma de troca de comentários entre o autor do c
   </div>
   <div class="column">
 
-![w:700](imagens/pair-programming.png)
+![w:600](imagens/pair-programming.png)
 
   </div>
 </div>
@@ -164,7 +174,7 @@ Parte da tarefa: não tem como subir na main sem alguém revisar e sua tarefa s�
 
 * Tarefa do time de QA
 * "Bala de prata"
-![w:550 center](imagens/bala-de-prata.png)
+![w:550](imagens/bala-de-prata.png)
 
 <!--
 * Não vai testar e2e
@@ -173,7 +183,7 @@ Parte da tarefa: não tem como subir na main sem alguém revisar e sua tarefa s�
 
 ---
 
-## A importância do Code Review
+## Benefícios do Code Review
 
 * Além de identificar, previne possíveis bugs
 * Aumenta a qualidade do software escrito
@@ -182,12 +192,13 @@ Parte da tarefa: não tem como subir na main sem alguém revisar e sua tarefa s�
 
 ---
 
-## A importância do Code Review
+## Benefícios do Code Review
 
 Uma boa cultura de code review pode indicar falhas no seu processo...
-  * Complexidade
-  * Precisão
-  * Necessidade
+
+* Complexidade da tarefa
+* Entendimento do que era preciso
+* Necessidade
 
 <!--
 1. Quanto tempo em review? Quantos arquivos alterados? Ficou muito tempo porque o codigo tava grande e era pesaroso de revisar? Pode indicar que as tasks nao estao bem quebradas
@@ -198,11 +209,9 @@ Uma boa cultura de code review pode indicar falhas no seu processo...
 -->
 
 ---
-<style scoped> 
-h1 {font-size:100px; text-align:center; margin-top:150px;} 
-</style>
+<!-- _class: slide-secao -->
 
-# Dicas para autores de uma MR
+## Dicas para autores de uma MR
 
 ---
 ## Dicas para autores de uma MR
@@ -238,7 +247,7 @@ O primeiro revisor é sempre **você**
 <div class="columns">
   <div class="column">
 
-- Verifique se existe um `CONTRIBUTING`
+- Verifique se existe o `CONTRIBUTING.md`
 - Siga os padrões que o projeto tiver
 - Se tiver um linter e/ou formatter, roda ele também
   
@@ -257,8 +266,8 @@ O primeiro revisor é sempre **você**
   <div class="column">
 
 Crie uma MR em draft
-- “erre rápido” para corrijir rápido
 - opinião rápida sobre a abordagem
+- “erre rápido” para corrijir rápido
   
   </div>
   <div class="column">
@@ -275,8 +284,8 @@ Crie uma MR em draft
   <div class="column">
 
 Crie uma MR em draft
-- “erre rápido” para corrijir rápido
 - opinião rápida sobre a abordagem
+- “erre rápido” para corrijir rápido
   
   </div>
   <div class="column">
@@ -292,9 +301,9 @@ Crie uma MR em draft
 <div class="columns">
   <div class="column">
 
-Forneça contexto para quem vai ler a MR
+Forneça __contexto__ para quem vai ler a MR
 - Escreva uma descrição clara e bem exemplificada
-- Adicione imagens, vídeos
+- Adicione imagens, gifs, vídeos
   
   </div>
   <div class="column">
@@ -310,8 +319,9 @@ Forneça contexto para quem vai ler a MR
 <div class="columns">
   <div class="column">
 
-- Discutir nos comentários, não no off
-- Se muita alteração por melhoria, pergunte se pode abrir outro ticket
+- Discutir nos comentários, não no pv
+- Responda o quanto antes os comentários
+- Muitas sugestões de melhoria? Abra outro ticket
   
   </div>
   <div class="column">
@@ -332,9 +342,8 @@ Forneça contexto para quem vai ler a MR
 <div class="columns">
   <div class="column">
 
-- Responda o quanto antes os comentários
-- Seja gentil
 - Não leve para o pessoal, você não é seu código
+- __Seja gentil__
   
   </div>
   <div class="column">
@@ -353,11 +362,9 @@ Não leve para o pessoal, você não é seu código
 -->
 
 ---
-<style scoped> 
-h1 {font-size:100px; text-align:center; margin-top:150px;} 
-</style>
+<!-- _class: slide-secao -->
 
-# Dicas para quem vai revisar a MR
+## Dicas para quem vai revisar a MR
 
 ---
 ## Dicas para quem vai revisar a MR
@@ -365,9 +372,9 @@ h1 {font-size:100px; text-align:center; margin-top:150px;}
 <div class="columns">
   <div class="column">
 
-- Adquira contexto antes de revisar
+Adquira contexto antes de revisar
 - O autor caprichou na descrição? Então use-a!
-- Leia o card atrelado a ela
+- Leia o card atrelado à tarefa
 
   </div>
   <div class="column">
@@ -383,7 +390,8 @@ h1 {font-size:100px; text-align:center; margin-top:150px;}
 _Roteiro pessoal_
 - Começe pelos arquivos não de código fonte, adições de libs, arquivos de configurações, documentação
 - Alterne entre o código fonte e os testes
-- Siga o fluxo desde o começo, por exemplo endpoint -> service -> utils
+- Siga o fluxo desde o começo, por exemplo 
+  `endpoint` -> `service` -> `utils`
 
 ---
 ## Dicas para quem vai revisar a MR
@@ -427,7 +435,7 @@ Nos arquivos de código...
 Nos arquivos de código...
 
 
-- Existe over-engineering? Muita complexidade?
+- Existe over-engineering?
 - Quem ler entenderá a solução no futuro? 
 
   </div>
@@ -551,7 +559,7 @@ Ao comentar na MR...
 ## Dicas para quem vai revisar a MR
 Ao comentar na MR...
 
-- Enalteça pontos interessantes, elogie códigos bons e comente se aprendeu algo novo
+- __Enalteça__ pontos interessantes, elogie códigos bons e comente se aprendeu algo novo
 
 ![center](imagens/elogio.png)
 
@@ -561,12 +569,12 @@ Ao comentar na MR...
 <div class="columns">
   <div class="column">
 
-- Se você não está revisando a MR de alguém, ela está travada.
+- Se você não está revisando a MR de alguém, essa pessoa está travada.
 
   </div>
   <div class="column">
 
-![w:550 center](imagens/meme-mr-travada.png)
+![w:500 center](imagens/meme-mr-travada.png)
 
   </div>
 </div>
@@ -613,9 +621,14 @@ Não é só porque eles são mais experientes que não cometem erros
 -->
 
 ---
+<!-- _class: slide-secao -->
+
 ## O que quero que levem com vocês
 
-* Code review é um pair programming assíncrono
+---
+## O que quero que levem com vocês
+
+* Code review é um pair programming assíncrono ("diálogo")
 * Parte da __sua__ tarefa
 * Aumenta a qualidade do software
 * __Oportunidade de aprendizado__

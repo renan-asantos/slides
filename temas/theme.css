@@ -4,7 +4,6 @@
 @import 'gaia';
 @import url('https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap');
 
-
 :root {
   
   /* Configurações gerais dos slides*/
@@ -13,7 +12,6 @@
   --link-color: #0066cc;
   --link-hover-color: #004499;
 
-  /* Configurações gerais dos slides*/
   font-family: "Monda", "Arial", sans-serif;
   color: var(--text-color);
   background-color: var(--background-color);
@@ -32,18 +30,9 @@ blockquote::after {
 }
 
 footer {
+  font-size: 15px;
   color: var(--text-color) !important;
 }
-
-/* h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: var(--text-color);
-    font-weight: 600;
-} */
 
 /* Assinatura (nome) persistida em todos os slides */
 section::before {
@@ -62,3 +51,168 @@ section::after {
   font-size: 55% !important;
 }
 
+/* Classe para slide de seção */
+section.slide-secao h2 {
+  font-size: 100px;
+  text-align: center;
+  margin-top: 150px;
+}
+
+/* Classe para slide de duas colunas */
+.duas-colunas {
+  display: flex;
+  gap: 2rem;
+}
+.duas-colunas > * {
+  flex: 1;
+}
+
+/*
+
+CÓDIGOS
+
+Temas que gostei:
+- github-dark
+- stackoverflow-dark
+- material-darker
+
+https://github.com/highlightjs/highlight.js/tree/main/src/styles
+https://highlightjs.org/demo
+*/
+
+/*!
+  Theme: StackOverflow Dark
+  Description: Dark theme as used on stackoverflow.com
+  Author: stackoverflow.com
+  Maintainer: @Hirse
+  Website: https://github.com/StackExchange/Stacks
+  License: MIT
+  Updated: 2021-05-15
+
+  Updated for @stackoverflow/stacks v0.64.0
+  Code Blocks: /blob/v0.64.0/lib/css/components/_stacks-code-blocks.less
+  Colors: /blob/v0.64.0/lib/css/exports/_stacks-constants-colors.less
+*/
+
+pre {
+  /* var(--highlight-color) */
+  color: #ffffff;
+  /* var(--highlight-bg) */
+  background: #1c1b1b;
+  font-size: 45px;
+  
+  line-height: 1.15;
+  padding: 15px;
+  padding-left: 20px;
+  box-shadow: var(--shadow) 0px 5px 15px;
+  border-radius: 10px;
+}
+
+.hljs-subst {
+  /* var(--highlight-color) */
+  color: #ffffff;
+}
+
+.hljs-comment {
+  /* var(--highlight-comment) */
+  color: #999999;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-meta .hljs-keyword,
+.hljs-doctag,
+.hljs-section {
+  /* var(--highlight-keyword) */
+  color: #88aece;
+}
+
+.hljs-attr {
+  /* var(--highlight-attribute); */
+  color: #88aece;
+}
+
+.hljs-attribute {
+  /* var(--highlight-symbol) */
+  color: #c59bc1;
+}
+
+.hljs-name,
+.hljs-type,
+.hljs-number,
+.hljs-selector-id,
+.hljs-quote,
+.hljs-template-tag {
+  /* var(--highlight-namespace) */
+  color: #f08d49;
+}
+
+.hljs-selector-class {
+  /* var(--highlight-keyword) */
+  color: #88aece;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-selector-attr {
+  /* var(--highlight-variable) */
+  color: #b5bd68;
+}
+
+.hljs-meta,
+.hljs-selector-pseudo {
+  /* var(--highlight-keyword) */
+  color: #88aece;
+}
+
+.hljs-built_in,
+.hljs-title,
+.hljs-literal {
+  /* var(--highlight-literal) */
+  color: #f08d49;
+
+  /* Remove sublinhado do tema Gaia */
+  text-decoration: none !important;
+}
+
+.hljs-bullet,
+.hljs-code {
+  /* var(--highlight-punctuation) */
+  color: #cccccc;
+}
+
+.hljs-meta .hljs-string {
+  /* var(--highlight-variable) */
+  color: #b5bd68;
+}
+
+.hljs-deletion {
+  /* var(--highlight-deletion) */
+  color: #de7176;
+}
+
+.hljs-addition {
+  /* var(--highlight-addition) */
+  color: #76c490;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-formula,
+.hljs-operator,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+}
