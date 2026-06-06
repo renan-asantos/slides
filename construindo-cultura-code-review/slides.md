@@ -107,11 +107,20 @@ img {margin-top: 30px}
 <!-- _footer: 1. Definição própria -->
 ---
 
-## O que são PRs?
+## O que são ~~PRs~~ MRs?
 
->> Pull Request é um recurso de plataformas de hospedagem de código Git para propor mudanças em um projeto de uma branch para outra.¹
+<div class="columns">
+  <div class="column">
 
-Gitlab possui um nome que eu prefiro: MRs ou Merge-Requests
+Gitlab possui um nome que eu prefiro: __MRs ou Merge-Requests__
+
+  </div>
+  <div class="column">
+
+![center](imagens/meme-gitlab-github.png)
+
+  </div>
+</div>
 
 <!--
 PR é porque o mantenedor do projeto vai ter que dar um pull depois das alterações realizadas
@@ -120,12 +129,12 @@ MR é porque o autor da MR vai mergear as alterações na branch de destino
 
 <!-- _footer: 1. Definição própria -->
 ---
-## O que são PRs?
+## O que são MRs?
 
 ![height:5in center](imagens/pr1.png)
 
 ---
-## O que são PRs?
+## O que são MRs?
 
 ![height:4in center](imagens/pr2.png)
 
