@@ -31,8 +31,9 @@ h3 {text-align:center}
 ## Sumário
 
 1. O que são PRs e Code Reviews?
-2. Benefícios do code review
-3. Dicas para autores de uma PR
+2. Benefícios do Code Review
+2. Code Review na era da IA
+3. Dicas para autores de PRs
 4. Dicas para revisores de PRs
 
 ---
@@ -72,11 +73,22 @@ h3 {text-align:center}
 ---
 ## Quem sou eu?
 
-- Bacharel em Física
-- Engenheiro de software na Serasa
-- Jogo vôlei, adoro jogos de tabuleiro e tenho uma tatuagem do desenho Avatar
-- Ajudei uns anos na organização dos eventos Python Brasil
 ![bg right:33%](imagens/eu.jpeg)
+
+<div class="columns">
+  <div class="column">
+
+- Jogo vôlei
+- Adoro jogos de tabuleiro e tenho uma tatuagem do desenho Avatar
+- Ajudei uns anos na organização dos eventos Python Brasil
+
+  </div>
+  <div class="column">
+
+![w:300 center](imagens/tattoo-avatar.jpeg)
+
+  </div>
+</div>
 
 ---
 <style scoped> 
@@ -98,9 +110,15 @@ img {margin-top: 30px}
 ![w:600 center](imagens/sei-nada-sei.png)
 
 ---
+
+<!-- _class: slide-secao -->
+
+## O que são PRs e Code Reviews?
+
+---
 ## O que são PRs?
 
->> Pull Request é um recurso de plataformas de hospedagem de código Git para propor mudanças em um projeto de uma branch para outra.¹
+>> Pull Request é um recurso de plataformas de hospedagem de código Git para propor mudanças de uma branch para outra em um projeto de software.¹
 
 ![center](imagens/gitflow-pr.png)
 
@@ -123,8 +141,8 @@ Gitlab possui um nome que eu prefiro: __MRs ou Merge-Requests__
 </div>
 
 <!--
-PR é porque o mantenedor do projeto vai ter que dar um pull depois das alterações realizadas
-MR é porque o autor da MR vai mergear as alterações na branch de destino
+PR é porque o mantenedor do projeto teria que dar um pull na branch com as alterações para testar e validar
+MR é porque o mantenedor vai mergear as alterações na branch de destino
 -->
 
 <!-- _footer: 1. Definição própria -->
@@ -144,7 +162,7 @@ MR é porque o autor da MR vai mergear as alterações na branch de destino
 
 >> Revisão de código é o processo no qual o autor de uma MR disponibiliza seu código para pelo menos uma outra pessoa avaliar, essa podendo adicionar comentários para o entendimento, estabelencendo-se um diálogo¹
 
-![w:700 center](imagens/gitflow-code-review.png)
+![w:650 center](imagens/gitflow-code-review.png)
 
 <!-- _footer: 1. Definição própria -->
 
@@ -162,7 +180,7 @@ Estabelece-se um "diálogo" na forma de troca de comentários entre o autor do c
 
 - Pair Programming, só que assíncrono
 * Parte da tarefa
-* Última barreira pré produção
+* Última barreira humana pré produção
 * Acordo entre o time/área/empresa
   
   </div>
@@ -189,6 +207,11 @@ Parte da tarefa: não tem como subir na main sem alguém revisar e sua tarefa s�
 * Não vai testar e2e
 * Não vai pegar TODOS os possíveis bugs
 -->
+
+---
+<!-- _class: slide-secao -->
+
+## Benefícios do Code Review 
 
 ---
 
@@ -218,28 +241,63 @@ Uma boa cultura de code review pode indicar falhas no seu processo...
 -->
 
 ---
-<!-- _class: slide-secao -->
 
-## Dicas para autores de uma MR
+# Code Review na era da IA
 
 ---
-## Dicas para autores de uma MR
+
+Dado que a IA existe
+Qual a importância do Code Review?
+O "par" agora é frequentemente humano + IA
+"[The Final Bottleneck](https://lucumr.pocoo.org/2026/2/13/the-final-bottleneck/)": historicamente, escrever código era mais lento que revisá-lo. A IA inverteu essa
+relação. 
+Impossível revisar o volume de código produzido por uma IA 
+Dilema do revisor: “Cognitive Debt”
+• Manter padrões anteriores e virar gargalo, ou aprovar no ritmo que o código chega e torcer para os testes peguem problemas que a revisão perdeu. 
+
+---
+
+Se a máquina escreve o código, quem revisa? Se a máquina também revisa, quem é
+responsável? O review humano se torna uma atividade de validação de intenção mais do que correção de
+bugs. 
+• "O time entende o código gerado?” passa a ser critério de DoD
+• WIP limits agora se aplicam ao throughput de revisão e compreensão, não ao de produção 
+O gargalo mudou. O WIP limit relevante é: "quantas mudanças o time
+consegue entender simultaneamente?"
+
+---
+
+Apenwarr (Tailscale) argumenta que a IA acelera a produção mas não o review: cada
+camada de aprovação adiciona ~10x ao tempo.
+Pair programming com IA reposiciona a validação no ponto mais barato da curva de custo.
+"Agora que entendemos como a IA mudou o jogo, vamos ver como isso impacta o papel de quem abre uma PR..."
+
+E nas dicas de autor/revisor, você pode incluir 1 ou 2 tópicos específicos sobre IA (ex: "não delegue o review inteiro à IA", "cuidado com PRs geradas por IA sem contexto"). Isso faz a seção de IA não parecer isolada, mas sim um fio condutor.
+
+---
+<!-- _class: slide-secao -->
+
+## Dicas para autores de MRs
+
+---
+## Dicas para autores de MRs
 
 - MRs pequenas
-- Sem juntar várias mini melhorias
+- Sem juntar **várias** mini melhorias
 
 ![bg w:400 right](imagens/meme-big-mr.png)
 
 ---
-## Dicas para autores de uma MR
+## Dicas para autores de MRs
 
 <div class="columns">
   <div class="column">
 
-O primeiro revisor é sempre **você**
+O primeiro revisor é sempre **você**!
 - CI
 - Conflitos
 - Testes unitários
+- Linter/formatter
 - Subiu em dev?
   
   </div>
@@ -251,32 +309,34 @@ O primeiro revisor é sempre **você**
 </div>
 
 ---
-## Dicas para autores de uma MR
+## Dicas para autores de MRs
 
 <div class="columns">
   <div class="column">
 
-- Verifique se existe o `CONTRIBUTING.md`
-- Siga os padrões que o projeto tiver
-- Se tiver um linter e/ou formatter, roda ele também
+O primeiro revisor é sempre **você**!
+
+**IA**: Não peça para alguém revisar o que nem você mesmo revisou
   
   </div>
   <div class="column">
 
-![w:700 center](imagens/contributing.png)
+![w:700 center](imagens/meme-review-my-code.png)
 
   </div>
 </div>
 
+<!-- _footer: 1. [Guidelines for Respectful Use of AI](https://skamille.medium.com/guidelines-for-respectful-use-of-ai-affcc85d7072) -->
+
 ---
-## Dicas para autores de uma MR
+## Dicas para autores de MRs
 
 <div class="columns">
   <div class="column">
 
 Crie uma MR em draft
 - opinião rápida sobre a abordagem
-- “erre rápido” para corrijir rápido
+- “erre rápido” para corrigir rápido
   
   </div>
   <div class="column">
@@ -287,7 +347,7 @@ Crie uma MR em draft
 </div>
 
 ---
-## Dicas para autores de uma MR
+## Dicas para autores de MRs
 
 <div class="columns">
   <div class="column">
@@ -305,7 +365,7 @@ Crie uma MR em draft
 </div>
 
 ---
-## Dicas para autores de uma MR
+## Dicas para autores de MRs
 
 <div class="columns">
   <div class="column">
@@ -323,7 +383,7 @@ Forneça __contexto__ para quem vai ler a MR
 </div>
 
 ---
-## Dicas para autores de uma MR
+## Dicas para autores de MRs
 
 <div class="columns">
   <div class="column">
@@ -346,7 +406,7 @@ Forneça __contexto__ para quem vai ler a MR
 -->
 
 ---
-## Dicas para autores de uma MR
+## Dicas para autores de MRs
 
 <div class="columns">
   <div class="column">
@@ -373,10 +433,10 @@ Não leve para o pessoal, você não é seu código
 ---
 <!-- _class: slide-secao -->
 
-## Dicas para quem vai revisar a MR
+## Dicas para revisores de MRs
 
 ---
-## Dicas para quem vai revisar a MR
+## Dicas para revisores de MRs
 
 <div class="columns">
   <div class="column">
@@ -394,7 +454,7 @@ Adquira contexto antes de revisar
 </div>
 
 ---
-## Dicas para quem vai revisar a MR
+## Dicas para revisores de MRs
 
 _Roteiro pessoal_
 - Começe pelos arquivos não de código fonte, adições de libs, arquivos de configurações, documentação
@@ -403,7 +463,7 @@ _Roteiro pessoal_
   `endpoint` -> `service` -> `utils`
 
 ---
-## Dicas para quem vai revisar a MR
+## Dicas para revisores de MRs
 Nos arquivos de código...
 
 <div class="columns">
@@ -420,7 +480,7 @@ Nos arquivos de código...
 </div>
 
 ---
-## Dicas para quem vai revisar a MR
+## Dicas para revisores de MRs
 Nos arquivos de código...
 <div class="columns">
   <div class="column">
@@ -436,7 +496,7 @@ Nos arquivos de código...
 </div>
 
 ---
-## Dicas para quem vai revisar a MR
+## Dicas para revisores de MRs
 
 <div class="columns">
   <div class="column">
@@ -456,7 +516,7 @@ Nos arquivos de código...
 </div>
 
 ---
-## Dicas para quem vai revisar a MR
+## Dicas para revisores de MRs
 
 <div class="columns">
   <div class="column">
@@ -474,7 +534,7 @@ Lembre do Zen do Python:
 </div>
 
 ---
-## Dicas para quem vai revisar a MR
+## Dicas para revisores de MRs
 Nos arquivos de testes...
 
 <div class="columns">
@@ -492,7 +552,7 @@ Nos arquivos de testes...
 </div>
 
 ---
-## Dicas para quem vai revisar a MR
+## Dicas para revisores de MRs
 Nos arquivos de testes...
 
 <div class="columns">
@@ -511,7 +571,7 @@ Nos arquivos de testes...
 </div>
 
 ---
-## Dicas para quem vai revisar a MR
+## Dicas para revisores de MRs
 Nos arquivos de documentação...
 
 - Tem algo que precisa ser atualizado na documentação?
@@ -521,7 +581,7 @@ Nos arquivos de documentação...
 
 
 ---
-## Dicas para quem vai revisar a MR
+## Dicas para revisores de MRs
 
 
 
@@ -539,7 +599,7 @@ Nas MRs mais críticas, faça checkout da branch, rode você mesmo e valide
 </div>
 
 ---
-## Dicas para quem vai revisar a MR
+## Dicas para revisores de MRs
 Ao comentar na MR...
 
 - Adicione sugestões de código
@@ -547,7 +607,7 @@ Ao comentar na MR...
 ![w:750](imagens/sugestao-codigo.png)
 
 ---
-## Dicas para quem vai revisar a MR
+## Dicas para revisores de MRs
 Ao comentar na MR...
 
 <div class="columns">
@@ -565,7 +625,7 @@ Ao comentar na MR...
 </div>
 
 ---
-## Dicas para quem vai revisar a MR
+## Dicas para revisores de MRs
 Ao comentar na MR...
 
 - __Enalteça__ pontos interessantes, elogie códigos bons e comente se aprendeu algo novo
@@ -573,12 +633,17 @@ Ao comentar na MR...
 ![center](imagens/elogio.png)
 
 ---
-## Dicas para quem vai revisar a MR
+## Dicas para revisores de MRs
 
 <div class="columns">
   <div class="column">
 
 - Se você não está revisando a MR de alguém, essa pessoa está travada.
+
+* **IA**: Dilema do revisor (“Cognitive Debt”)
+
+<!-- manter padrões anteriores e virar gargalo, ou aprovar no ritmo que o código chega e torcer para os testes peguem problemas que a revisão perdeu
+-->
 
   </div>
   <div class="column">
@@ -589,7 +654,7 @@ Ao comentar na MR...
 </div>
 
 ---
-## Dicas para quem vai revisar a MR
+## Dicas para revisores de MRs
 
 <div class="columns">
   <div class="column">
@@ -606,7 +671,7 @@ Ao comentar na MR...
 </div>
 
 ---
-## Dicas para quem vai revisar a MR
+## Dicas para revisores de MRs
 
 <div class="columns">
   <div class="column">
@@ -654,6 +719,22 @@ Palestra do [André Girol de Code Review na Python Brasil 2021](https://www.yout
   <div class="column">
 
 ![w:800](imagens/palestra-girol.png)
+
+  </div>
+</div>
+
+---
+# Agradecimentos
+
+<div class="columns">
+  <div class="column">
+
+Post no blog do Osvaldo Santana - [Agilidade em tempos de IA](https://osantana.me/agilidade-em-tempos-de-ia/)
+
+  </div>
+  <div class="column">
+
+![w:600](imagens/post-agilidade-tempos-ia.png)
 
   </div>
 </div>
