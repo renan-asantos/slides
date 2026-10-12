@@ -242,42 +242,75 @@ Uma boa cultura de code review pode indicar falhas no seu processo...
 
 ---
 
-# Code Review na era da IA
+<!-- _class: slide-secao -->
+
+## Code Review na era da IA
 
 ---
 
-Dado que a IA existe
-Qual a importância do Code Review?
-O "par" agora é frequentemente humano + IA
-"[The Final Bottleneck](https://lucumr.pocoo.org/2026/2/13/the-final-bottleneck/)": historicamente, escrever código era mais lento que revisá-lo. A IA inverteu essa
-relação. 
-Impossível revisar o volume de código produzido por uma IA 
-Dilema do revisor: “Cognitive Debt”
-• Manter padrões anteriores e virar gargalo, ou aprovar no ritmo que o código chega e torcer para os testes peguem problemas que a revisão perdeu. 
+Dado que a IA existe...
+* Volume de código gerado é muito maior
+* O "pair programming assíncrono" agora é síncrono com humano + IA
+* Escrever código era mais lento que revisá-lo. A IA inverteu essa lógica¹
+
+<!-- _footer: 1. [The Final Bottleneck](https://lucumr.pocoo.org/2026/2/13/the-final-bottleneck/) -->
 
 ---
 
-Se a máquina escreve o código, quem revisa? Se a máquina também revisa, quem é
-responsável? O review humano se torna uma atividade de validação de intenção mais do que correção de
-bugs. 
-• "O time entende o código gerado?” passa a ser critério de DoD
-• WIP limits agora se aplicam ao throughput de revisão e compreensão, não ao de produção 
-O gargalo mudou. O WIP limit relevante é: "quantas mudanças o time
-consegue entender simultaneamente?"
+<div class="columns">
+  <div class="column">
+
+> E se fizermos um agente para revisar MRs?
+
+* Se a IA escreve o código e a IA também revisa, quem é o responsável?
+* Com quem está o conhecimento do código?
+  
+  </div>
+  <div class="column">
+
+  </div>
+</div>
 
 ---
 
-Apenwarr (Tailscale) argumenta que a IA acelera a produção mas não o review: cada
-camada de aprovação adiciona ~10x ao tempo.
-Pair programming com IA reposiciona a validação no ponto mais barato da curva de custo.
-"Agora que entendemos como a IA mudou o jogo, vamos ver como isso impacta o papel de quem abre uma PR..."
+<div class="columns">
+  <div class="column">
 
-E nas dicas de autor/revisor, você pode incluir 1 ou 2 tópicos específicos sobre IA (ex: "não delegue o review inteiro à IA", "cuidado com PRs geradas por IA sem contexto"). Isso faz a seção de IA não parecer isolada, mas sim um fio condutor.
+> E se fizermos um agente para revisar MRs?
+
+- Se a IA escreve o código e a IA também revisa, quem é o responsável?
+- Com quem está o conhecimento do código?
+  
+  </div>
+  <div class="column">
+
+![w:600 center](imagens/o-que-esse-codigo-faz.gif)
+
+  </div>
+</div>
+
+---
+
+## Qual a importância do Code Review agora?
+
+* Autores de MRs cada vez menos revisando a saída das IAs
+* O review humano vira uma validação de intenção mais do que correção de bugs
+* "O time entende o código gerado?” passa a ser critério de DoD
+* Limite de WIP importante é: "quantas mudanças o time consegue entender simultaneamente?"
+
+<!--
+* Então é no review que vai ser pego erros e ajustes
+* ...
+* Para perpetuar o conhecimento
+* Antes n podia ter mta coisa in progress, hj essa etapa ja ta mais rapida, mas precisa de um limite de code review
+-->
 
 ---
 <!-- _class: slide-secao -->
 
 ## Dicas para autores de MRs
+
+<!-- "Agora que entendemos como a IA mudou um pouco o jogo, vamos ver algumas dicas pra quem abre uma MR..."-->
 
 ---
 ## Dicas para autores de MRs
@@ -316,7 +349,7 @@ O primeiro revisor é sempre **você**!
 
 O primeiro revisor é sempre **você**!
 
-**IA**: Não peça para alguém revisar o que nem você mesmo revisou
+**IA**: Não peça para alguém revisar o que nem você mesmo revisou¹
   
   </div>
   <div class="column">
@@ -401,8 +434,9 @@ Forneça __contexto__ para quem vai ler a MR
 </div>
 
 <!--
-5. Discuta as sugestões de preferência nos comentários da própria PR para que todos vejam ou acompanhem e se não estiverem se entendendo, façam uma ligação.
-6. Se a sugestão que outra pessoa der for modificar muito o código ou não impactar negativamente, pergunte se pode abrir um ticket de dívida técnica linkando aquela sugestão
+1. Discuta as sugestões de preferência nos comentários da própria PR para que todos vejam ou acompanhem e se não estiverem se entendendo, façam uma ligação.
+2. Vira um bate bola rapido e fecha logo a mr
+3. Se a sugestão que outra pessoa der for modificar muito o código ou não impactar negativamente, pergunte se pode abrir um ticket de dívida técnica linkando aquela sugestão
 -->
 
 ---
@@ -412,7 +446,7 @@ Forneça __contexto__ para quem vai ler a MR
   <div class="column">
 
 - Não leve para o pessoal, você não é seu código
-- __Seja gentil__
+- __Seja gentil e se coloque no lugar do revisor__
   
   </div>
   <div class="column">
@@ -423,8 +457,6 @@ Forneça __contexto__ para quem vai ler a MR
 </div>
 
 <!--
-Vira um bate bola rapido e fecha logo a mr
-
 Sempre responda um comentário, mesmo que com um emoji 🙂, não feche o comentário que alguém fez uma pergunta, a pessoa nao sabe se voce acatou, recusou a sugestao etc
 
 Não leve para o pessoal, você não é seu código
@@ -525,6 +557,8 @@ Lembre do Zen do Python:
 
 >> Simple is better than complex
 
+__IA__: tende a deixar mais complexo, então cuidado¹
+
   </div>
   <div class="column">
 
@@ -532,6 +566,8 @@ Lembre do Zen do Python:
 
   </div>
 </div>
+
+<!-- _footer: 1. [Guidelines for Respectful Use of AI](https://skamille.medium.com/guidelines-for-respectful-use-of-ai-affcc85d7072) -->
 
 ---
 ## Dicas para revisores de MRs
@@ -569,16 +605,6 @@ Nos arquivos de testes...
 
   </div>
 </div>
-
----
-## Dicas para revisores de MRs
-Nos arquivos de documentação...
-
-- Tem algo que precisa ser atualizado na documentação?
-- A forma de subir local mudou em algo?
-
-![bg right w:500](imagens/meme-deploy-docs.png)
-
 
 ---
 ## Dicas para revisores de MRs
