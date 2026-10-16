@@ -268,6 +268,8 @@ Dado que a IA existe...
   </div>
   <div class="column">
 
+![w:600 center](imagens/ia-cycle.png)
+
   </div>
 </div>
 
