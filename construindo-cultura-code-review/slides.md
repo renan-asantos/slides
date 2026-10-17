@@ -262,8 +262,8 @@ Dado que a IA existe...
 
 > E se fizermos um agente para revisar MRs?
 
-* Se a IA escreve o código e a IA também revisa, quem é o responsável?
-* Com quem está o conhecimento do código?
+- Se a IA escreve o código e a IA também revisa, quem é o responsável?
+- Com quem está o conhecimento do código?
   
   </div>
   <div class="column">
@@ -275,36 +275,18 @@ Dado que a IA existe...
 
 ---
 
-<div class="columns">
-  <div class="column">
-
-> E se fizermos um agente para revisar MRs?
-
-- Se a IA escreve o código e a IA também revisa, quem é o responsável?
-- Com quem está o conhecimento do código?
-  
-  </div>
-  <div class="column">
-
-![w:600 center](imagens/o-que-esse-codigo-faz.gif)
-
-  </div>
-</div>
-
----
-
 ## Qual a importância do Code Review agora?
 
 * Autores de MRs cada vez menos revisando a saída das IAs
 * O review humano vira uma validação de intenção mais do que correção de bugs
 * "O time entende o código gerado?” passa a ser critério de DoD
-* Limite de WIP importante é: "quantas mudanças o time consegue entender simultaneamente?"
+* Mudança do conceito do limite de WIP
 
 <!--
 * Então é no review que vai ser pego erros e ajustes
 * ...
 * Para perpetuar o conhecimento
-* Antes n podia ter mta coisa in progress, hj essa etapa ja ta mais rapida, mas precisa de um limite de code review
+* Antes n podia ter mta coisa in progress, hj essa etapa ja ta mais rapida, mas precisa de um limite de code review. "quantas mudanças o time consegue entender simultaneamente?"
 -->
 
 ---
@@ -389,7 +371,7 @@ Crie uma MR em draft
 
 Crie uma MR em draft
 - opinião rápida sobre a abordagem
-- “erre rápido” para corrijir rápido
+- “erre rápido” para corrigir rápido
   
   </div>
   <div class="column">
@@ -407,6 +389,7 @@ Crie uma MR em draft
 
 Forneça __contexto__ para quem vai ler a MR
 - Escreva uma descrição clara e bem exemplificada
+- Roteiro de revisão
 - Adicione imagens, gifs, vídeos
   
   </div>
@@ -423,9 +406,9 @@ Forneça __contexto__ para quem vai ler a MR
 <div class="columns">
   <div class="column">
 
-- Discutir nos comentários, não no pv
-- Responda o quanto antes os comentários
-- Muitas sugestões de melhoria? Abra outro ticket
+* Discutir nos comentários, não no pv
+* Responda o quanto antes os comentários
+* Muitas sugestões de melhoria? Abra outro ticket
   
   </div>
   <div class="column">
@@ -436,7 +419,7 @@ Forneça __contexto__ para quem vai ler a MR
 </div>
 
 <!--
-1. Discuta as sugestões de preferência nos comentários da própria PR para que todos vejam ou acompanhem e se não estiverem se entendendo, façam uma ligação.
+1. Para que todos vejam ou acompanhem e se não estiverem se entendendo, façam uma ligação.
 2. Vira um bate bola rapido e fecha logo a mr
 3. Se a sugestão que outra pessoa der for modificar muito o código ou não impactar negativamente, pergunte se pode abrir um ticket de dívida técnica linkando aquela sugestão
 -->
@@ -459,9 +442,7 @@ Forneça __contexto__ para quem vai ler a MR
 </div>
 
 <!--
-Sempre responda um comentário, mesmo que com um emoji 🙂, não feche o comentário que alguém fez uma pergunta, a pessoa nao sabe se voce acatou, recusou a sugestao etc
-
-Não leve para o pessoal, você não é seu código
+Sempre RESPONDA UM COMENTARIO, mesmo que com um emoji 🙂, não feche o comentário que alguém fez uma pergunta, a pessoa nao sabe se voce acatou, recusou a sugestao etc
 -->
 
 ---
@@ -504,6 +485,7 @@ Nos arquivos de código...
   <div class="column">
 
 - Analise nomes de variáveis, estão claros e intuitivos?
+* **IA**: agente de revisor de MR pode ajudar
 
   </div>
   <div class="column">
@@ -687,23 +669,6 @@ Ao comentar na MR...
 <div class="columns">
   <div class="column">
 
-- Não façam LGTM
-- Sem approve da confiança
-
-  </div>
-  <div class="column">
-
-![w:430 center](imagens/meme-lgtm.png)
-
-  </div>
-</div>
-
----
-## Dicas para revisores de MRs
-
-<div class="columns">
-  <div class="column">
-
 - Cuidado com o efeito manada
 - Revisem, nem que seu review não "conte"
 
@@ -717,8 +682,8 @@ Ao comentar na MR...
 </div>
 
 <!--
-Não é porque o senior e spec aprovou que voce nao pode negar e revisar com calma. "Só porque uma figura de autoridade aprovou, não significa que você deve ignorar seu próprio julgamento.” você deve também revisar as PRs dos sêniors/specs com igual critério. 
-
+Msm que SR SPEC aprovou, revise com calma, nao ignore seu julgamento
+Revisar MRs de SRs/Specs com igual critério.
 Não é só porque eles são mais experientes que não cometem erros
 -->
 
@@ -730,10 +695,11 @@ Não é só porque eles são mais experientes que não cometem erros
 ---
 ## O que quero que levem com vocês
 
-* Code review é um pair programming assíncrono ("diálogo")
-* Parte da __sua__ tarefa
-* Aumenta a qualidade do software
-* __Oportunidade de aprendizado__
+- Code review é um pair programming assíncrono ("diálogo")
+- Parte da __sua__ tarefa e dono da MR
+- Não é uma "bala de prata"
+- Dado que a IA existe, review mais importante
+- __Oportunidade de aprendizado__
 
 ---
 # Agradecimentos
